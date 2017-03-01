@@ -1,7 +1,7 @@
 MobileAppRecommendationSystem
 ==============================
 
-Mobile App Recommendation System[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D STA141B - Mobile App Recommendation System
+The explosive growth of the mobile application (app) market has made it difficult for users to find the most interesting and relevant apps from the hundreds of thousands that exist today. We are interested to develop a model that can recommend customers the right apps based on an existing data set that contains records of 957 users for 4082 apps. We also plan to test our model with more app data scrapped from website and build a web application that allows users to play around with it. 
 
 Project Organization
 ------------
