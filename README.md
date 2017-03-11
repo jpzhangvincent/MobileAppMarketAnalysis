@@ -13,7 +13,7 @@ The explosive growth of the mobile application (app) market has made it difficul
     - [ ] Web app with Flask
     
 ## Teammates
-Jiaping(Vincent) Zhang, Wenyu Liu, Yaorui, Liu, Yuchen Liu
+Jiaping(Vincent) Zhang, Wenyu Li, Yaorui, Liu, Yuchen Li
 
 ## Project Organization
 ------------
