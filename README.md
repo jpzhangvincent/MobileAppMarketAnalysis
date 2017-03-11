@@ -60,6 +60,7 @@ The explosive growth of the mobile application (app) market has made it difficul
     └── tox.ini            <- tox file with settings for running tox; see tox.testrun.org
 
 ### Team mates
+
 Jiaping(Vincent) Zhang, Wenyu Liu, Yaorui, Liu, Yuchen Liu
 --------
 
