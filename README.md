@@ -1,9 +1,21 @@
-MobileAppRecommendationSystem
+Mobile App Market Analysis
 ==============================
 
-The explosive growth of the mobile application (app) market has made it difficult for users to find the most interesting and relevant apps from the hundreds of thousands that exist today. We are interested to develop a model that can recommend customers the right apps based on an existing data set that contains records of 957 users for 4082 apps. We also plan to test our model with more app data scrapped from website and build a web application that allows users to play around with it. 
+The explosive growth of the mobile application (app) market has made it difficult for users to find the most interesting and relevant apps from the hundreds of thousands that exist today. We are interested to analyze the quality of apps and understand the user experiences of using mobile apps on the Itune App Store. In this project, we would go through the data science cycle including problem/data curations, data management, data analytics and result-oriented presentations through data visualization.
 
-Project Organization
+## To do list
+- [x] Data Acquisition through Web Scraping with scrapy 
+- [x] Data Management with MongoDB
+- [ ] Exploratory Data Analysis 
+- [ ] Machine Learning Applications
+- [ ] Presentation & Deployment
+    - [ ] Blog Post
+    - [ ] Web app with Flask
+    
+## Teammates
+Jiaping(Vincent) Zhang, Wenyu Li, Yaorui, Liu, Yuchen Li
+
+## Project Organization
 ------------
 
     ├── LICENSE
@@ -49,7 +61,6 @@ Project Organization
     │       └── visualize.py
     │
     └── tox.ini            <- tox file with settings for running tox; see tox.testrun.org
-
 
 --------
 
