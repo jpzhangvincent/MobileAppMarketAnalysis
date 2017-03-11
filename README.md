@@ -59,9 +59,7 @@ The explosive growth of the mobile application (app) market has made it difficul
     │
     └── tox.ini            <- tox file with settings for running tox; see tox.testrun.org
 
-### Team mates
-
-Jiaping(Vincent) Zhang, Wenyu Liu, Yaorui, Liu, Yuchen Liu
+Teammates: Jiaping(Vincent) Zhang, Wenyu Liu, Yaorui, Liu, Yuchen Liu
 --------
 
 <p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
