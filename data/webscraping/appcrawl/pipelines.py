@@ -5,28 +5,33 @@
 # Don't forget to add your pipeline to the ITEM_PIPELINES setting
 # See: http://doc.scrapy.org/en/latest/topics/item-pipeline.html
 import pymongo
-
-from scrapy.conf import settings
+#from scrapy.conf import settings
 from scrapy.exceptions import DropItem
-from scrapy import log
-
+import logging
 
 class AppcrawlPipeline(object):
+    collection_name = 'appitems'
 
-    def __init__(self):
-        connection = pymongo.MongoClient(
-            settings['MONGODB_SERVER'],
-            settings['MONGODB_PORT']
+    def __init__(self, mongo_uri, mongo_db):
+        self.mongo_uri = mongo_uri
+        self.mongo_db = mongo_db
+
+    @classmethod
+    def from_crawler(cls, crawler):
+        return cls(
+            mongo_uri=crawler.settings.get('MONGO_URI'),
+            mongo_db=crawler.settings.get('MONGO_DATABASE')
         )
-        db = connection[settings['MONGODB_DB']]
-        self.collection = db[settings['MONGODB_COLLECTION']]
+
+    def open_spider(self, spider):
+        self.client = pymongo.MongoClient(self.mongo_uri)
+        self.db = self.client[self.mongo_db]
+
+    def close_spider(self, spider):
+        self.client.close()
 
     def process_item(self, item, spider):
-        for field, data in item.items():
-            if not data:
-                raise DropItem("Missing %s of app data from %s\n" %(field, item['url']))
-        self.collection.update({'url': item['url']}, dict(item), upsert=True)
-        log.msg("App added to MongoDB database!",
-                level=log.DEBUG, spider=spider)
+        self.db[self.collection_name].update({'url': item['url']}, dict(item), upsert=True)
+        logging.info("App %s added to MongoDB database!" % item['name'])
         return item
 

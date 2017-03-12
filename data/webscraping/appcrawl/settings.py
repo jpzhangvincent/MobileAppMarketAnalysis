@@ -29,10 +29,9 @@ USER_AGENT_LIST = (
 
 HTTPCACHE_ENABLED = True
 
-MONGODB_SERVER = "localhost"
-MONGODB_PORT = 27017
-MONGODB_DB = "appstore"
-MONGODB_COLLECTION = "appitems"
+MONGO_URI = "mongodb://localhost:27017"
+MONGO_DATABASE = "appstore"
+
 
 DOWNLOADER_MIDDLEWARES = {
   'appcrawl.random_user_agent.RandomUserAgentMiddleware': 1
