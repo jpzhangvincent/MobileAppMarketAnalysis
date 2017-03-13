@@ -8,30 +8,30 @@ class AppstoreSpider(CrawlSpider):
     name = 'appstore'
     allowed_domains = ['itunes.apple.com']
     start_urls = ['http://itunes.apple.com/us/genre/ios-books/id6018?mt=8',
-                  'http://itunes.apple.com/us/genre/ios-business/id6000?mt=8',
-                  'http://itunes.apple.com/us/genre/ios-catalogs/id6022?mt=8',
-                  'http://itunes.apple.com/us/genre/ios-education/id6017?mt=8',
-                  'http://itunes.apple.com/us/genre/ios-entertainment/id6016?mt=8',
-                  'http://itunes.apple.com/us/genre/ios-finance/id6015?mt=8',
-                  'http://itunes.apple.com/us/genre/ios-food-drink/id6023?mt=8',
-                  'http://itunes.apple.com/us/genre/ios-games/id6014?mt=8',
-                  'http://itunes.apple.com/us/genre/ios-health-fitness/id6013?mt=8',
-                  'http://itunes.apple.com/us/genre/ios-lifestyle/id6012?mt=8',
-                  'http://itunes.apple.com/us/genre/ios-medical/id6020?mt=8',
-                  'http://itunes.apple.com/us/genre/ios-music/id6011?mt=8',
-                  'http://itunes.apple.com/us/genre/ios-navigation/id6010?mt=8',
-                  'http://itunes.apple.com/us/genre/ios-news/id6009?mt=8',
-                  'http://itunes.apple.com/us/genre/ios-newsstand/id6021?mt=8',
-                  'http://itunes.apple.com/us/genre/ios-photo-video/id6008?mt=8',
-                  'http://itunes.apple.com/us/genre/ios-productivity/id6007?mt=8',
-                  'http://itunes.apple.com/us/genre/ios-reference/id6006?mt=8',
-                  'https://itunes.apple.com/us/genre/ios-shopping/id6024?mt=8',
-                  'http://itunes.apple.com/us/genre/ios-social-networking/id6005?mt=8',
-                  'http://itunes.apple.com/us/genre/ios-sports/id6004?mt=8',
-                  'https://itunes.apple.com/us/genre/ios-stickers/id6025?mt=8',
-                  'http://itunes.apple.com/us/genre/ios-travel/id6003?mt=8',
-                  'http://itunes.apple.com/us/genre/ios-utilities/id6002?mt=8',
-                  'http://itunes.apple.com/us/genre/ios-weather/id6001?mt=8'
+              'http://itunes.apple.com/us/genre/ios-business/id6000?mt=8',
+              'http://itunes.apple.com/us/genre/ios-catalogs/id6022?mt=8',
+              'http://itunes.apple.com/us/genre/ios-education/id6017?mt=8',
+              'http://itunes.apple.com/us/genre/ios-entertainment/id6016?mt=8',
+              'http://itunes.apple.com/us/genre/ios-finance/id6015?mt=8',
+              'http://itunes.apple.com/us/genre/ios-food-drink/id6023?mt=8',
+              'http://itunes.apple.com/us/genre/ios-games/id6014?mt=8',
+              'http://itunes.apple.com/us/genre/ios-health-fitness/id6013?mt=8',
+              'http://itunes.apple.com/us/genre/ios-lifestyle/id6012?mt=8',
+              'http://itunes.apple.com/us/genre/ios-medical/id6020?mt=8',
+              'http://itunes.apple.com/us/genre/ios-music/id6011?mt=8',
+              'http://itunes.apple.com/us/genre/ios-navigation/id6010?mt=8',
+              'http://itunes.apple.com/us/genre/ios-news/id6009?mt=8',
+              'http://itunes.apple.com/us/genre/ios-newsstand/id6021?mt=8',
+              'http://itunes.apple.com/us/genre/ios-photo-video/id6008?mt=8',
+              'http://itunes.apple.com/us/genre/ios-productivity/id6007?mt=8',
+              'http://itunes.apple.com/us/genre/ios-reference/id6006?mt=8',
+              'https://itunes.apple.com/us/genre/ios-shopping/id6024?mt=8',
+              'http://itunes.apple.com/us/genre/ios-social-networking/id6005?mt=8',
+              'http://itunes.apple.com/us/genre/ios-sports/id6004?mt=8',
+              'https://itunes.apple.com/us/genre/ios-stickers/id6025?mt=8',
+              'http://itunes.apple.com/us/genre/ios-travel/id6003?mt=8',
+              'http://itunes.apple.com/us/genre/ios-utilities/id6002?mt=8',
+              'http://itunes.apple.com/us/genre/ios-weather/id6001?mt=8'
     ]
 
     def parse(self, response):
@@ -48,11 +48,11 @@ class AppstoreSpider(CrawlSpider):
         i['id'] = response.url.split('/')[-1].split('?')[0][2:]
         i['category'] = hxs.xpath('//div[@id="left-stack"]/div[1]/ul/li[2]/a/span/text()').extract_first()
         try:
-            i['description'] = " ".join(hxs.xpath('//div[@id="content"]/div/div[2]/div[1]/p/text()').extract_first()).strip().encode('ascii','ignore')
+            i['description'] = " ".join(hxs.xpath('//div[@id="content"]/div/div[2]/div[1]/p/text()').extract()).encode('ascii','ignore').strip()
         except:
             i['description'] = None
         try:
-            i['new_version_desc'] = " ".join(hxs.xpath('//div[@id="content"]/div/div[2]/div[3]/p/text()').extract_first()).strip().encode('ascii','ignore')
+            i['new_version_desc'] = " ".join(hxs.xpath('//div[@id="content"]/div/div[2]/div[3]/p/text()').extract()).encode('ascii','ignore').strip()
         except:
             i['new_version_desc'] = None
         i['update_date'] = hxs.xpath('//div[@id="left-stack"]/div[1]/ul/li[3]/span[2]/text()').extract_first()
