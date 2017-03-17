@@ -10,12 +10,12 @@ The explosive growth of the mobile application (app) market has made it difficul
     - [x] Explore the distribution of Review Ratings and its possible covariates
     - [x] Do in-app purchases significantly affect the apps' ratings, especially for gaming apps?
 - [ ] Machine Learning Applications
-    - [ ] Topic Modeling: How do people comment on the quality of apps?
-    - [ ] Topic Modeling: Are there any different characteristics/topics in new version descriptions for apps that improved/lowered the ratings?
+    - [x] Topic Modeling: How do people comment on the quality of apps?
+    - [x] Topic Modeling: Are there any different characteristics/topics in new version descriptions for apps that improved/lowered the ratings?
     - [ ] Prediction: Can we predict the rating of the app when its new version is released?
 - [ ] Presentation & Deployment
-    - [ ] Blog Post
-    - [ ] Web app with Flask
+    - [ ] Blog Post: Discuss our workflow and present it in a digestable way
+    - [ ] Build a Web app with Flask(in future)
     
 ## Teammates
 Jiaping(Vincent) Zhang, Wenyu Li, Yaorui Liu, Yuchen Li
