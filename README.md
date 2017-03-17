@@ -10,8 +10,8 @@ The explosive growth of the mobile application (app) market has made it difficul
     - [x] Explore the distribution of Review Ratings and its possible covariates
     - [x] Do in-app purchases significantly affect the apps' ratings, especially for gaming apps?
 - [ ] Machine Learning Applications
-    - [ ] Topic Modeling: how people commented on the quality of good/bad apps in common?
-    - [ ] Topic Modeling: how people commented on the changes of apps that improved/lowered the ratings?
+    - [ ] Topic Modeling: How do people comment on the quality of apps?
+    - [ ] Topic Modeling: Are there any different characteristics/topics in new version descriptions for apps that improved/lowered the ratings?
     - [ ] Prediction: Can we predict the rating of the app when its new version is released?
 - [ ] Presentation & Deployment
     - [ ] Blog Post
