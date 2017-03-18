@@ -14,7 +14,7 @@ The explosive growth of the mobile application (app) market has made it difficul
     - [x] Topic Modeling: Are there any different characteristics/topics in new version descriptions for apps that improved/lowered the ratings?
     - [ ] Prediction: Can we predict the rating of the app when its new version is released?
 - [ ] Presentation & Deployment
-    - [ ] Blog Post: Discuss our workflow and present it in a digestable way
+    - [x] Blog Post: Discuss our workflow and present it in a digestable way
     - [ ] Build a Web app with Flask(in future)
     
 ## Teammates
