@@ -18,9 +18,9 @@ The explosive growth of the mobile application (app) market has made it difficul
     - [ ] Build a Web app with Flask(in future)
     
 ## Teammates
-<a target="_blank" href="https://jpzhangvincent.github.io/"> Jiaping(Vincent) Zhang,
-<a target="_blank" href="https://liwy1113.github.io/"> Wenyu Li,
-<a target="_blank" href="https://yuchen2017.github.io/"> Yuchen Li, 
+[Jiaping(Vincent) Zhang](https://jpzhangvincent.github.io/),
+[Wenyu Li](https://liwy1113.github.io/),
+[Yuchen Li](https://yuchen2017.github.io/), 
 Yaorui Liu
 
 ## Project Organization
