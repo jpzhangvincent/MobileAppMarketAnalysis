@@ -21,7 +21,7 @@ The explosive growth of the mobile application (app) market has made it difficul
 [Jiaping(Vincent) Zhang](https://jpzhangvincent.github.io/),
 [Wenyu Li](https://liwy1113.github.io/),
 [Yuchen Li](https://yuchen2017.github.io/), 
-Yaorui Liu
+[Yaorui Liu](https://yaoruiliu.github.io/)
 
 ## Project Organization
 ------------
